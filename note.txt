@@ -1,0 +1,3 @@
+lancer le serveur localement depuis le dossier avec
+
+python app.py
