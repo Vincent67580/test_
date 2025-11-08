@@ -77,8 +77,11 @@ def contact():
     return render_template('contact.html')
 
 
-port = int(os.environ.get("PORT", 5000))
+
 
 
 if __name__ == '__main__':
+    # Récupère le port donné par Render (ou 5000 par défaut en local)
+    port = int(os.environ.get("PORT", 5000))
+    # Expose le serveur sur toutes les interfaces (obligatoire sur Render)
     app.run(host="0.0.0.0", port=port)
